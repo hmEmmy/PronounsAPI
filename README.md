@@ -28,16 +28,18 @@ This utility is perfect for developers looking to personalize player interaction
 2. Initialize the API in your plugin's main class:
 
 ```java
-package your.plugin.mainClass;
+package your.plugin.YourPlugin;
 
 import me.emmy.api.PronounsAPI;
 
-private PronounsAPI pronounsAPI;
+public class YourPlugin extends JavaPlugin {
+    private PronounsAPI pronounsAPI;
 
-@Override
-public void onEnable() {
-    this.pronounsAPI = new PronounsAPI(this, true); 
-    //true or false; whether you want to use the default repository or not
+    @Override
+    public void onEnable() {
+        this.pronounsAPI = new PronounsAPI(this, true);
+        //true or false; whether you want to use the default repository or not
+    }
 }
 ```
 
