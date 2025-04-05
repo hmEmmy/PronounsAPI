@@ -8,6 +8,19 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Arrays;
 
+/**
+ * <p><strong>PronounsAPI</strong> — A lightweight, extensible API for managing player pronouns in Minecraft plugins.</p>
+ *
+ * <p>This API provides a default implementation through {@link me.emmy.api.repository.PlayerRepository},
+ * but is also designed to integrate with existing core systems. Developers using custom profile handling
+ * can assign {@code EnumPlayerPronouns} manually to their own player profile classes.</p>
+ *
+ * <p><strong>Please do not remove this file header or the logger below in the constructor.</strong>
+ *
+ * @author Emmy
+ * @project PronounsAPI
+ * @since 05/04/2025
+ */
 @Getter
 public class PronounsAPI {
     private final JavaPlugin plugin;
