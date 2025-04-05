@@ -132,7 +132,7 @@ Contributions are welcome! To propose an improvement:
 4. Commit with a clear message.
 5. Open a pull request and describe your changes.
 
-Ideas like localization support, GUI toggles, or expanded gender options are always appreciated.
+Ideas like localization support or GUI toggles are always appreciated.
 
 ## Author
 
@@ -142,4 +142,4 @@ Ideas like localization support, GUI toggles, or expanded gender options are alw
 - **Discord**: [discord.gg/revere](https://discord.gg/revere)
 - **Email**: [support@revere.dev](mailto:support@revere.dev)
 
-Thank you for using and supporting inclusive design in your projects! 🌈
+Thank you for using and supporting PronounsAPI!
