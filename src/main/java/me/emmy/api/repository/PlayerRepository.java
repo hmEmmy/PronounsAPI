@@ -13,10 +13,10 @@ import java.util.*;
  */
 @Getter
 public class PlayerRepository {
-    private final Map<UUID, EnumPlayerPronouns> playerList;
+    private final Map<UUID, EnumPlayerPronouns> playerPronounsMap;
 
     public PlayerRepository() {
-        this.playerList = new HashMap<>();
+        this.playerPronounsMap = new HashMap<>();
     }
 
     /**
@@ -26,7 +26,7 @@ public class PlayerRepository {
      * @return The pronouns of the player.
      */
     public EnumPlayerPronouns getPronouns(Player player) {
-        return this.playerList.get(player.getUniqueId());
+        return this.playerPronounsMap.get(player.getUniqueId());
     }
 
     /**
@@ -36,7 +36,7 @@ public class PlayerRepository {
      * @param playerPronouns The pronouns of the player.
      */
     public void addPlayer(UUID uuid, EnumPlayerPronouns playerPronouns) {
-        this.playerList.put(uuid, playerPronouns);
+        this.playerPronounsMap.put(uuid, playerPronouns);
     }
 
     /**
@@ -45,6 +45,6 @@ public class PlayerRepository {
      * @param uuid The UUID of the player.
      */
     public void removePlayer(UUID uuid) {
-        this.playerList.remove(uuid);
+        this.playerPronounsMap.remove(uuid);
     }
 }
