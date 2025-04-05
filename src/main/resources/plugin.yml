@@ -1,0 +1,3 @@
+name: PronounsAPI
+version: '${project.version}'
+main: me.emmy.api.PronounsAPI
