@@ -28,11 +28,14 @@ This utility is perfect for developers looking to personalize player interaction
 2. Initialize the API in your plugin's main class:
 
 ```java
+package your.plugin.mainClass;
+
 private PronounsAPI pronounsAPI;
 
 @Override
 public void onEnable() {
-    this.pronounsAPI = new PronounsAPI(this);
+    this.pronounsAPI = new PronounsAPI(this, true); 
+    //true or false; whether you want to use the default repository or not
 }
 ```
 
@@ -65,20 +68,29 @@ import me.emmy.api.enums.EnumPlayerPronouns;
 public class Profile {
     private EnumPlayerPronouns pronouns;
 
+    /**
+     * Default pronouns, "They/Them".
+     * players can change this via pronoun selection menu
+     * or a command, It's really up to you.
+     */
     public Profile() {
         this.pronouns = EnumPlayerPronouns.NOT_SPECIFIED;
-
-        /*
-         * Default pronouns, "They/Them".
-         * players can change this via pronoun selection menu
-         * or a command, It's really up to you.
-         */
     }
 
+    /**
+     * Allows you to get the pronouns of a player.
+     * 
+     * @return EnumPlayerPronouns
+     */
     public EnumPlayerPronouns getPronouns() {
         return this.pronouns;
     }
 
+    /**
+     * Allows you to set the pronouns of a player.
+     * 
+     * @param pronouns EnumPlayerPronouns
+     */
     public void setPronouns(EnumPlayerPronouns pronouns) {
         this.pronouns = pronouns;
     }
