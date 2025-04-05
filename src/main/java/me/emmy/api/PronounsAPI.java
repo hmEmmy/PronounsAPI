@@ -1,17 +1,21 @@
 package me.emmy.api;
 
+import lombok.Getter;
+import me.emmy.api.repository.PlayerRepository;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class PronounsAPI extends JavaPlugin {
+@Getter
+public class PronounsAPI {
+    private final JavaPlugin plugin;
+    private final PlayerRepository playerRepository;
 
-    @Override
-    public void onEnable() {
-        // Plugin startup logic
-
-    }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+    /**
+     * Constructor for the PronounsAPI class.
+     *
+     * @param plugin The JavaPlugin instance.
+     */
+    public PronounsAPI(JavaPlugin plugin) {
+        this.plugin = plugin;
+        this.playerRepository = new PlayerRepository();
     }
 }
