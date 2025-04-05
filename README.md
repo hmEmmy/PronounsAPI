@@ -30,6 +30,8 @@ This utility is perfect for developers looking to personalize player interaction
 ```java
 package your.plugin.mainClass;
 
+import me.emmy.api.PronounsAPI;
+
 private PronounsAPI pronounsAPI;
 
 @Override
@@ -62,6 +64,8 @@ This stores the data in-memory, and is ideal for smaller plugins or servers with
 For developers using a custom core, you should ignore the default repository and instead integrate pronouns directly into your profile class:
 
 ```java
+package your.plugin.profile;
+
 import me.emmy.api.enums.EnumPlayerPronouns;
 
 // Using lombok might be a good idea here :), I still put the methods in for clarity
